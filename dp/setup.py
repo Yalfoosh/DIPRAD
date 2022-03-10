@@ -2,7 +2,7 @@ from pathlib import Path
 from setuptools import find_packages, setup
 
 
-def readme(path: str = f"{Path(__file__).resolve().parent}/README.md"):
+def readme(path=Path(__file__).resolve().parent / "README.md"):
     with open(path) as f:
         return f.read()
 
@@ -23,8 +23,7 @@ setup(
             "diprad_dp.*",
         )
     ),
-    install_requires=[
-    ],
+    install_requires=[],
     python_requires=">=3.8, <=3.8",
     include_package_data=True,
     zip_safe=False,
